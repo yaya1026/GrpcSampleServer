@@ -1,0 +1,6 @@
+[submodule "ProtocolBuffersSample"]
+	path = ProtocolBuffersSample
+	url = git@github.com:yaya1026/ProtocolBuffersSample.git
+[submodule "proto"]
+	path = proto
+	url = git@github.com:yaya1026/ProtocolBuffersSample.git
