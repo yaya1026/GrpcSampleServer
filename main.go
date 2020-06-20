@@ -9,11 +9,11 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"google.golang.org/protobuf/types/known/emptypb"
-	"grpc.sample.server/generated"
+	game "grpc.sample.server/generated"
 )
 
 type server struct {
-	generated.BookServiceClient
+	game.GameServiceClient
 }
 
 const port = ":8080"
@@ -25,7 +25,7 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	generated.RegisterBookServiceServer(s, &server{})
+	game.RegisterGameServiceServer(s, &server{})
 	reflection.Register(s)
 	fmt.Println("connect!")
 	if err := s.Serve(lis); err != nil {
@@ -33,6 +33,12 @@ func main() {
 	}
 }
 
-func (s *server) GetBooks(ctx context.Context, in *emptypb.Empty) (*generated.Books, error){
-	return &generated.Books{Books: []*generated.Book{{Id: 1, Title: "Go", Author: "Yaya", Isbn: "978-4-86501-422-8", Overview: "いいよ"}}}, nil
+func (s *server) GetGameReviews(ctx context.Context, in *emptypb.Empty) (*game.GameReviews, error) {
+
+	return nil, nil
+}
+
+func (s *server) GetGameReview(ctx context.Context, in *game.GameReviewRequest) (*game.GameReview, error) {
+
+	return nil, nil
 }
