@@ -39,7 +39,7 @@ func (s *server) GetGameReviews(ctx context.Context, in *emptypb.Empty) (*game.G
 		Games: []*game.GameReview{
 			{
 				Id:        1,
-				Title:     "龍が如く0",
+				Title:     "龍が如く0 誓いの場所",
 				Provider:  "SEGA",
 				ImageUrl:  "https://images-na.ssl-images-amazon.com/images/I/61ZbS8G1NhL._AC_.jpg",
 				Comment:   "素晴らしいストーリー、実写では無いが素晴らしい画像、更に格闘ゲームの要素を始め様々な遊び要素が満載で、色々な楽しみ方があり、まだまだ全てを楽し尽くしたわけではないが、娯楽作品としての映画産業が今後衰退してゆくのではないか？と感じさせる程のゲームだった。",
@@ -81,10 +81,10 @@ func (s *server) GetGameReview(ctx context.Context, in *game.GameReviewRequest) 
 
 	return &game.GameReview{
 		Id:        1,
-		Title:     "龍が如く0",
+		Title:     "龍が如く0 誓いの場所",
 		Provider:  "SEGA",
 		ImageUrl:  "https://images-na.ssl-images-amazon.com/images/I/61ZbS8G1NhL._AC_.jpg",
-		Comment:   "素晴らしいストーリー、実写では無いが素晴らしい画像、更に格闘ゲームの要素を始め様々な遊び要素が満載で、色々な楽しみ方があり、まだまだ全てを楽し尽くしたわけではないが、娯楽作品としての映画産業が今後衰退してゆくのではないか？と感じさせる程のゲームだった。",
+		Comment:   "素晴らしいストーリー、実写では無いが素晴らしい画像、更に格闘ゲームの要素を始め様々な遊び要素が満載で、色々な楽しみ方があり、まだまだ全てを楽しみ尽くしたわけではないが、娯楽作品としての映画産業が今後衰退してゆくのではないか？と感じさせる程のゲームだった。",
 		User:      &game.User{Id: 1, Name: "yaya"},
 		CreatedAt: &timestamppb.Timestamp{},
 	}, nil
